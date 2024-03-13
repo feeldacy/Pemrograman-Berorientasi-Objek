@@ -19,12 +19,6 @@ public class Booking {
         return bookingID;
     }
 
-    Film getFilm(){
-        return film;
-    }
-
-    int getNumberOfTickets(){return numberOfTickets;}
-
     @Override
     public String toString() {
         return "Film: " + film.getTitle() + "\nJumlah Tiket: " + numberOfTickets + "\nBooking ID: " + bookingID;

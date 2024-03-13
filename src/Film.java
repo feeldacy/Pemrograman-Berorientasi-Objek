@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class Film {
     String title;
     String genre;
@@ -14,8 +12,6 @@ public class Film {
     }
 
     String getTitle(){return title;}
-    String getGenre(){return genre;}
-    int getDuration(){return duration;}
     int getAvailableSeats(){return availableSeats;}
 
     void bookFilm(int numberOfTickets) {
