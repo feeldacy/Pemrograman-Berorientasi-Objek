@@ -10,12 +10,20 @@ public class lat4s2 {
 
         movieApp.displayFilms();
 
+        System.out.println("\n--------------------\n");
         movieApp.searchFilm("Joker");
         movieApp.searchFilm("Dune");
 
+        System.out.println("\n--------------------\n");
+
         movieApp.bookFilm(avenger, 2);
+
+        System.out.println("\n--------------------\n");
+
         movieApp.bookFilm(joker, 100);
         movieApp.displayFilms();
+
+        System.out.println("\n--------------------\n");
 
         movieApp.searchBooking(376);
         movieApp.searchBooking(000);
