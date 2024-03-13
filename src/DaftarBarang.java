@@ -9,5 +9,4 @@ public class DaftarBarang{
         this.hargaBarang = hargaBarang;
         this.jumlahBarang = jumlahBarang;
     }
-
 }
