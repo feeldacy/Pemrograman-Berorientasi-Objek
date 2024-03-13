@@ -17,7 +17,7 @@ public class MovieApp {
     void displayFilms() {
         System.out.println("List of Films");
         for (Film film : films) {
-            System.out.println(film);
+            System.out.println(film.displayFilmDetails());
         }
     }
 
@@ -47,7 +47,7 @@ public class MovieApp {
             Booking booking = new Booking(film, numberOfTickets);
             bookings.add(booking);
             film.bookFilm(numberOfTickets);
-            System.out.println("Pesanan berhasil dengan detail pesanan: \n" + booking);
+            System.out.println("Pesanan berhasil dengan detail pesanan: \n" + booking.displayBookingDetails());
         } else {
             System.out.println("Pesanan tidak dapat diproses. Kursi tidak tersedia.");
         }

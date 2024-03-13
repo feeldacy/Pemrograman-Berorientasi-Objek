@@ -19,8 +19,7 @@ public class Booking {
         return bookingID;
     }
 
-    @Override
-    public String toString() {
+    public String displayBookingDetails() {
         return "Film: " + film.getTitle() + "\nJumlah Tiket: " + numberOfTickets + "\nBooking ID: " + bookingID;
     }
 

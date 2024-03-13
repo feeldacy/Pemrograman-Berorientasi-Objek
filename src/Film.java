@@ -22,8 +22,7 @@ public class Film {
         }
     }
 
-    @Override
-    public String toString() {
+    public String displayFilmDetails() {
         return title + " - " + genre + " - Duration: " + duration + " mins - Available Seats: " + availableSeats;
     }
 }
