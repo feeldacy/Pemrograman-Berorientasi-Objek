@@ -1,12 +1,30 @@
 public class DaftarBarang{
 
-    String namaBarang;
-    int hargaBarang;
-    int jumlahBarang;
+    private String namaBarang;
+    private int hargaBarang;
+    private int jumlahBarang;
 
-    DaftarBarang(String namaBarang, int hargaBarang, int jumlahBarang) {
+    public String getNamaBarang() {
+        return namaBarang;
+    }
+
+    public int getHargaBarang() {
+        return hargaBarang;
+    }
+
+    public int getJumlahBarang() {
+        return jumlahBarang;
+    }
+
+    public void setNamaBarang(String namaBarang) {
         this.namaBarang = namaBarang;
+    }
+
+    public void setHargaBarang(int hargaBarang) {
         this.hargaBarang = hargaBarang;
+    }
+
+    public void setJumlahBarang(int jumlahBarang) {
         this.jumlahBarang = jumlahBarang;
     }
 }

@@ -12,9 +12,9 @@ public class KeranjangBelanja {
 
     void tambahBarang(DaftarBarang produk) {
 
-        if (totalBarang + produk.jumlahBarang <=5) {
+        if (totalBarang + produk.getJumlahBarang() <=5) {
             keranjang.add(produk);
-            totalBarang += produk.jumlahBarang;
+            totalBarang += produk.getJumlahBarang();
             System.out.println("Berhasil memasukkan ke keranjang");
         } else {
             System.out.println("Wes to, Keranjang e we mbludag!!");
@@ -28,8 +28,8 @@ public class KeranjangBelanja {
         System.out.println("Barang pada keranjang:");
 
         for (DaftarBarang produk : keranjang) {
-            System.out.printf("# %s, jumlah: %d%n", produk.namaBarang, produk.jumlahBarang);
-            totalHarga += (produk.hargaBarang * produk.jumlahBarang);
+            System.out.printf("# %s, jumlah: %d%n", produk.getNamaBarang(), produk.getJumlahBarang());
+            totalHarga += (produk.getHargaBarang() * produk.getJumlahBarang());
         }
 
         System.out.printf("Total harga yang harus di bayar: %d", totalHarga);
