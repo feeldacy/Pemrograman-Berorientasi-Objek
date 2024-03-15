@@ -1,12 +1,11 @@
 public class lat4s1 {
-    public static void main(String[] args) {
+    public static void main(String[] argr) {
+        Barang produk1 = new Barang("Beras", 50000, 1);
+        Barang produk2 = new Barang("Sabun", 10000, 2);
+        Barang produk3 = new Barang("Sampo", 5000, 2);
+        Barang produk4 = new Barang("Gula", 15000, 3);
 
-        DaftarBarang produk1 = new DaftarBarang("Beras", 50000, 1);
-        DaftarBarang produk2 = new DaftarBarang("Sabun", 10000, 2);
-        DaftarBarang produk3 = new DaftarBarang("Sampo", 5000, 2);
-        DaftarBarang produk4 = new DaftarBarang("Gula", 15000, 3);
-
-        KeranjangBelanja keranjang1 = new KeranjangBelanja();
+        Keranjang keranjang1 = new Keranjang();
         keranjang1.tambahBarang(produk1);
         keranjang1.tambahBarang(produk2);
         keranjang1.tambahBarang(produk3);
