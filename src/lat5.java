@@ -31,6 +31,6 @@ public class lat5 {
 //        System.out.println(produk1.getNamaBarang());
         System.out.println("\n====================\n");
 
-        keranjang1.detailKeranjang();
+        keranjang1.printHasil();
     }
 }

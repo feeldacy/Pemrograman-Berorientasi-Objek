@@ -2,36 +2,41 @@ import java.util.ArrayList;
 
 public class KeranjangBelanja {
 
-    ArrayList<DaftarBarang> keranjang;
-    int totalBarang = 0;
+    int jmlBarang = 0;
 
+    ArrayList<DaftarBarang> listBarang = new ArrayList<>();
 
-    KeranjangBelanja() {
-        this.keranjang = new ArrayList<>();
+    public KeranjangBelanja() {
     }
 
-    void tambahBarang(DaftarBarang produk) {
-
-        if (totalBarang + produk.getJumlahBarang() <=5) {
-            keranjang.add(produk);
-            totalBarang += produk.getJumlahBarang();
-            System.out.println("Berhasil memasukkan ke keranjang");
+    void tambahBarang(DaftarBarang barang) {
+        if (jmlBarang + barang.getJumlahBarang() <= 5) {
+            listBarang.add(barang);
+            jmlBarang += barang.getJumlahBarang();
+            System.out.println("Berhasil memasukan ke kranjang");
         } else {
-            System.out.println("Wes to, Keranjang e we mbludag!!");
-        }
-    }
-
-    void detailKeranjang() {
-
-        int totalHarga = 0;
-        System.out.println("Jumlah Barang Di Keranjang Saat Ini: " + totalBarang);
-        System.out.println("Barang pada keranjang:");
-
-        for (DaftarBarang produk : keranjang) {
-            System.out.printf("# %s, jumlah: %d%n", produk.getNamaBarang(), produk.getJumlahBarang());
-            totalHarga += (produk.getHargaBarang() * produk.getJumlahBarang());
+            System.out.println("Wes too, Keranjange wes mbludhag!!");
         }
 
-        System.out.printf("Total harga yang harus di bayar: %d", totalHarga);
     }
+
+    int totalHarga() {
+        int harga = 0;
+        for (DaftarBarang barang : listBarang
+        ) {
+            harga += barang.getHargaBarang() * barang.getJumlahBarang();
+        }
+        return harga;
+    }
+
+    void printHasil() {
+        System.out.println("Jumlah Barang Di Keranjang Saat Ini : " + jmlBarang);
+        System.out.println("Barang Pada Keranjang: ");
+        for (int i = 0; i < listBarang.size(); i++) {
+            System.out.println("# " + listBarang.get(i).getNamaBarang() + ", jumlah : " + listBarang.get(i).getJumlahBarang());
+        }
+        System.out.println("Total Harga Yang Harus di Bayar : " + totalHarga());
+    }
+
+
 }
